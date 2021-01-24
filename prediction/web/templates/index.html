@@ -4,7 +4,7 @@
     <style>
 .center {
   margin: auto;
-  width: 35%;
+  width: 50%;
   padding: 10px;
 }
 img {
@@ -23,13 +23,15 @@ body {
 }
 
 
+
     </style>
 </head>
-<body>
-<br>
 
-<h1 class="center" style="color:#009933">Inventory Management System</h1> <br>
-<h3 class="alignment" style="color:#3333ff">Current Prediction:</h3><br><br>
+<body>
+<p align="right" id="demo"></p>
+<h1 class="center" style="color:#009933">Inventory Management System. (IMS)</h1> <br>
+<h3 class="alignment" style="color:#3333ff">Current Prediction:</h3>
+<br><br>
 <img src="{{url_for('static', filename='prediction_plot.jpeg')}}" alt="prediction_plot" width="700" height="333">
 <br>
 <div class="center">
@@ -44,4 +46,11 @@ body {
 </div>
 
 </body>
+<script>
+var d = new Date();
+document.getElementById("demo").innerHTML = d;
+
+
+
+</script>
 </html>
