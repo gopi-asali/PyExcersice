@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<head>
+    <style>
+.center {
+  margin: auto;
+  width: 35%;
+  padding: 10px;
+}
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.alignment {
+  margin: auto;
+  width: 52%;
+}
+
+body {
+  background-color: #ccffcc;
+}
+
+
+    </style>
+</head>
+<body>
+<br>
+
+<h1 class="center" style="color:#009933">Inventory Management System</h1> <br>
+<h3 class="alignment" style="color:#3333ff">Current Prediction:</h3><br><br>
+<img src="{{url_for('static', filename='prediction_plot.jpeg')}}" alt="prediction_plot" width="700" height="333">
+<br>
+<div class="center">
+    <form action="{{ url_for('get_results') }}" method="post">
+        <label for="ques">Post your question here:</label>
+        <input type="text" id="ques" name="ques">
+        <input type="submit" value="Submit">
+    </form>
+    <h2>{{ data }}</h2>
+    <p><b>Note:</b> Question should be related to the inventory system.</p>
+    <p><b>For ex:</b> What is the physical inventory quantity on 2010-01-11? </p>
+</div>
+
+</body>
+</html>
